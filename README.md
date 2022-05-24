@@ -11,6 +11,7 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 - [x] Planejar o cronograma completo
 - [x] Pensar em Funcionalidades
 - [x] Criar o projeto django e prepará-lo para desenvolvimento
+- [x] Desenhar todos os projetos de tela
 - [x] Criar um projeto em react e prepará-lo para desenvolvimento
 
 ## 26/05
