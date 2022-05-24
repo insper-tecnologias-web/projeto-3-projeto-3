@@ -14,13 +14,12 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 - [x] Criar um projeto em react e prepará-lo para desenvolvimento
 
 ## 26/05
-- [ ] Projetar a endpoint que retorna todos os filmes
-- [ ] Projetar a endpoint PUT que edite a situação de um filme
-- [ ] Projetar a endpoint que deletará um filme
-- [ ] Projetar a endpoint que salva um filme
-- [ ] Começar o desenvolvimento do frontend levando em consideração que serão muitas páginas - navigator 
+- [ ] Projetar a endpoint que retorna uma playlist 
+- [ ] Projetar a endpoint que deletará uma musica da playlist
+- [ ] Projetar a endpoint que adiciona uma musica na playlist
+- [ ] Começar o desenvolvimento do frontend 
 - [ ] Primeira versão do frontend - Integração com o backend
-- [ ] Criar a página de sua lista
+- [ ] Criar a página com todas as playlist
 
 ## Semana 3 - 28/11 a 4/12
 - [ ] Projetar a comunicação do frontend com a API - Criar a página que retira informações dos filmes que renderiza ao usuário (title/get-overview-details
@@ -34,7 +33,3 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 - [ ] Terminar os estilos das páginas
 - [ ] Verificar se as 3 primeiras funcionalidades estão em perfeito estado
 - [ ] Fazer o deploy da página
-
-## Baixa prioridade
-- [ ] Fazer uma aba com recomendações aos usuários baseada na sua lista
-- [ ] Ordenar a lista do usário por nota
