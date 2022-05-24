@@ -15,8 +15,10 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 
 ## 26/05
 - [ ] Projetar a endpoint que retorna uma playlist 
-- [ ] Projetar a endpoint que deletará uma musica da playlist
-- [ ] Projetar a endpoint que adiciona uma musica na playlist
+- [ ] Projetar a endpoint que deleta e adiciona uma musica da playlist
+- [ ] Projetar a endpoint que mostra as musicas mais tocadas
+- [ ] Projetar a endpoint que favorita e desfavorita uma musica
+- [ ] Projetar a endpoint que mostra musica aleatoria
 - [ ] Começar o desenvolvimento do frontend 
 - [ ] Primeira versão do frontend - Integração com o backend
 - [ ] Criar a página com todas as playlist
