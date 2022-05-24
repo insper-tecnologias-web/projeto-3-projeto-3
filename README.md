@@ -2,8 +2,6 @@
 
 Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 
-# Projeto3TecWeb
-
 ## Cronograma
 
 ## 24/05
