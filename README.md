@@ -1,6 +1,6 @@
 # Tecnologias Web, Projeto 3 - 2022.1
 
-Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
+Jerônimo Afrange, Lucas Fonseca e Ricardo Israel - Grupo 9
 
 ## Cronograma
 
