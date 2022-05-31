@@ -22,7 +22,7 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 - [ ] Primeira versão do frontend - Integração com o backend
 - [ ] Criar a página com todas as playlist
 
-## Semana 3 - 28/11 a 4/12
+## 31/05
 - [ ] Projetar a comunicação do frontend com a API - Criar a página que retira informações dos filmes que renderiza ao usuário (title/get-overview-details
 )
 - [ ] Possibilitar que o usuário salve um filme e mostrar todas as opções de estado
@@ -30,7 +30,7 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel
 - [ ] Criar a barra de pesquisa com autocomplete
 - [ ] Projetar todos os estilos das páginas - nada muito robusto, apenas que o visual fique limpo e bom aos olhos.
 
-## Semana 4 - 5/12 a 8/12
+## 02/06
 - [ ] Terminar os estilos das páginas
 - [ ] Verificar se as 3 primeiras funcionalidades estão em perfeito estado
 - [ ] Fazer o deploy da página
