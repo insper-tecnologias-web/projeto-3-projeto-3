@@ -1,0 +1,29 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+.search-bar{
+    width: 100vh;
+    height: 6vh;
+    background-color: #fff;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+.search-bar:focus{
+    outline: none;
+}
+.search-bar::placeholder{
+    font-size: 1.2rem;
+}
+.lista{
+      position: relative;
+  display: inline-block;
+}
