@@ -1,12 +1,12 @@
-.track-search-result{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vh;
-  height: 4vh;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.track-search-result {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+    width: 96vh;
+}
 
-  cursor: pointer;
+.track-search-result-info {
+    margin-left: 3rem;
 }
