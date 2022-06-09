@@ -10,6 +10,25 @@ from urllib.parse import urlencode
 from django.utils import timezone
 
 
+
+def get_user_top_music(user_id):
+	''' Requests the users top 20 music '''
+
+	spotify_user = SpotifyUser.objects.get(user_id=user_id)
+
+	headers = {
+		'Authorization': spotify_user.authorization(),
+		'Content-Type': 'application/json'
+	}
+
+	url = SpotifyAppConfig.SPOTIFY_API_USER_TOP_MUSIC_URL
+
+	top_music = requests.get(url, headers=headers).json()
+
+	return top_music
+
+
+
 def get_spotify_user_info(token_info):
 	''' Requests the user information of the given token '''
 

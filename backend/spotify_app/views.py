@@ -40,6 +40,13 @@ def callback(request):
 	return response
 
 
+def user_top_music(request, user_id):
+
+	user_top_music = get_user_top_music(user_id)
+
+	return JsonResponse(user_top_music)
+
+
 
 
 
