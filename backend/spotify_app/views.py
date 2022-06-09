@@ -1,27 +1,37 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-
+from django.http import HttpResponse, JsonResponse
 from .apps import SpotifyAppConfig
+from .utils import *
+
+def front(request):
+	code = request.GET.get('code', '')
+	return HttpResponse(code)
 
 
-def front(request): return HttpResponse('Aqui seria o front')
+def spotify_login(request):
 
+	login_url = spotify_login_url()
+	data = {'login_page': login_url}
 
-def login(request):
-
-	sp_auth = SpotifyAppConfig.spAuth()
-
-	# This url will prompt you a Spotify login page, then redirect user to your /callback upon authorization
-	redirect_url = sp_auth.get_authorize_url() # Note: You should parse this somehow. It may not be in a pretty format.
-	return redirect(redirect_url)
+	return JsonResponse(data)
 
 
 def callback(request):
 
-	sp_auth = SpotifyAppConfig.spAuth()
-	code = request.GET.get('code', '')
-	token = sp_auth.get_access_token(code=code)
+	if request.method == 'POST':
+		code = request.POST.get('code')
+		response = HttpResponse()
+		response.status_code = 200
+		request_tokens(code)
 
-	print(token)
+	else:
+		response = HttpResponse()
+		response.status_code = 400
+	
+	return response
 
-	return redirect(SpotifyAppConfig.frontend_address)
+
+
+
+
+
+
