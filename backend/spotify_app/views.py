@@ -2,6 +2,8 @@ from django.http import HttpResponse, JsonResponse
 from .apps import SpotifyAppConfig
 from .utils import *
 
+
+
 def front(request):
 	code = request.GET.get('code', '')
 	return HttpResponse(code)
@@ -21,7 +23,15 @@ def callback(request):
 		code = request.POST.get('code')
 		response = HttpResponse()
 		response.status_code = 200
-		request_tokens(code)
+		register_user(code)
+
+	# -- --- --- TEMPORÁRIO	 --- --- --- ---
+	if request.method == 'GET':
+		code = request.GET.get('code')
+		response = HttpResponse()
+		response.status_code = 200
+		register_user(code)
+	# -- --- --- --- --- --- --- --- --- ---
 
 	else:
 		response = HttpResponse()
