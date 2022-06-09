@@ -21,16 +21,16 @@ def callback(request):
 
 	if request.method == 'POST':
 		code = request.POST.get('code')
-		response = HttpResponse()
-		response.status_code = 200
-		register_user(code)
+		token_info = get_token_info(code)
+		frontend_user_data = register_user(token_info)
+		response = JsonResponse(frontend_user_data)
 
 	# -- --- --- TEMPORÁRIO	 --- --- --- ---
 	if request.method == 'GET':
 		code = request.GET.get('code')
-		response = HttpResponse()
-		response.status_code = 200
-		register_user(code)
+		token_info = get_token_info(code)
+		frontend_user_data = register_user(token_info)
+		response = JsonResponse(frontend_user_data)
 	# -- --- --- --- --- --- --- --- --- ---
 
 	else:

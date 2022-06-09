@@ -1,4 +1,6 @@
 __pycache__
-env
+*env*
 *db*
 .cache
+env/*
+*migrations*

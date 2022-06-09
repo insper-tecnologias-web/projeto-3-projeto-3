@@ -28,8 +28,52 @@ def get_spotify_user_info(token_info):
 
 
 
-def register_user(code):
+def register_user(token_info):
 	''' Requests the access and refresh tokens from spotify's API, as well as username'''
+	
+	refresh_token = token_info['refresh_token']
+	access_token = token_info['access_token']
+	token_expires = timezone.now() + datetime.timedelta(seconds=token_info['expires_in'])
+
+	user_info = get_spotify_user_info(token_info)
+	user_email = user_info['email']
+	user_id = user_info['id']
+	user_country = user_info['country']
+	user_display_name = user_info['display_name']
+
+	try:
+		spotify_user = SpotifyUser.objects.get(user_id=user_id)
+		spotify_user.email = user_email
+		spotify_user.country = user_country
+		spotify_user.display_name = user_display_name
+		spotify_user.token_expires = token_expires
+		spotify_user.access_token = access_token
+		spotify_user.refresh_token = refresh_token
+
+	except SpotifyUser.DoesNotExist:
+		spotify_user = SpotifyUser(
+			email=user_email,
+			user_id=user_id,
+			country=user_country,
+			display_name=user_display_name,
+			token_expires=token_expires,
+			access_token=access_token,
+			refresh_token=refresh_token
+		)
+
+	spotify_user.save()
+
+	frontend_user_data = {
+		'user_id': user_id,
+		'display_name': user_display_name
+	}
+
+	return frontend_user_data
+
+
+
+def get_token_info(code):
+	''' Requests the token info for a given code '''
 
 	authorization = SpotifyAppConfig.CLIENT_ID + ':' + SpotifyAppConfig.CLIENT_SECRET
 	authorization = base64.urlsafe_b64encode(authorization.encode())
@@ -49,29 +93,8 @@ def register_user(code):
 	url = SpotifyAppConfig.SPOTIFY_API_AUTH_TOKEN_URL
 
 	token_info = requests.post(url, headers=headers, data=params).json()
-	
-	refresh_token = token_info['refresh_token']
-	access_token = token_info['access_token']
 
-	token_expires = timezone.now() + datetime.timedelta(seconds=token_info['expires_in'])
-
-	user_info = get_spotify_user_info(token_info)
-	user_email = user_info['email']
-	user_id = user_info['id']
-	user_country = user_info['country']
-	user_display_name = user_info['display_name']
-
-	spotify_user = SpotifyUser(
-		email=user_email,
-		user_id=user_id,
-		country=user_country,
-		display_name=user_display_name,
-		token_expires=token_expires,
-		access_token=access_token,
-		refresh_token=refresh_token
-	)
-
-	spotify_user.save()
+	return token_info
 
 
 
