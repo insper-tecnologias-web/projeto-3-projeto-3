@@ -3,6 +3,8 @@ from django.utils import timezone
 from .apps import SpotifyAppConfig
 
 import base64
+import requests
+import datetime
 
 # Create your models here.
 
@@ -29,7 +31,7 @@ class SpotifyUser(models.Model):
 	def authorization(self):
 		''' Returns the authorizantion header '''
 
-		if timezone.now() >= self.token_expires: self.update_tokens
+		if timezone.now() >= self.token_expires: self.update_tokens()
 
 		return 'Bearer ' + str(self.access_token)
 
@@ -56,7 +58,6 @@ class SpotifyUser(models.Model):
 		token_info = requests.post(url, headers=headers, data=params).json()
 
 		self.access_token = token_info['access_token']
-		self.refresh_token = token_info['refresh_token']
 		self.token_expires = timezone.now() + datetime.timedelta(seconds=token_info['expires_in'])
 
 
