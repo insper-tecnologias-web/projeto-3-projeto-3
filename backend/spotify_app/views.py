@@ -42,9 +42,16 @@ def callback(request):
 
 def user_top_music(request, user_id):
 
-	user_top_music = get_user_top_music(user_id)
+	user_top_music = get_user_top(user_id, "music")
 
 	return JsonResponse(user_top_music)
+
+
+def user_top_artists(request, user_id):
+
+	user_top_artists = get_user_top(user_id, "artists")
+
+	return JsonResponse(user_top_artists)
 
 
 

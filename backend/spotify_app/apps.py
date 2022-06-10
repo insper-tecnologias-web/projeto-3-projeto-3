@@ -42,6 +42,7 @@ class SpotifyAppConfig(AppConfig):
     SPOTIFY_API_BASE_URL = 'https://api.spotify.com/v1/'
     SPOTIFY_API_CURRENT_USER_URL = SPOTIFY_API_BASE_URL + 'me/'
     SPOTIFY_API_USER_TOP_MUSIC_URL = SPOTIFY_API_CURRENT_USER_URL + 'top/tracks/'
+    SPOTIFY_API_USER_TOP_ARTISTS_URL = SPOTIFY_API_CURRENT_USER_URL + 'top/artists/'
     # -- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 

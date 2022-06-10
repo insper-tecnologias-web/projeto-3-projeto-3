@@ -11,8 +11,9 @@ from django.utils import timezone
 
 
 
-def get_user_top_music(user_id):
-	''' Requests the users top 20 music '''
+
+def get_user_top(user_id, top_type):
+	''' Requests the users top 20 music (top_type: "artists" or "music")'''
 
 	spotify_user = SpotifyUser.objects.get(user_id=user_id)
 
@@ -21,7 +22,11 @@ def get_user_top_music(user_id):
 		'Content-Type': 'application/json'
 	}
 
-	url = SpotifyAppConfig.SPOTIFY_API_USER_TOP_MUSIC_URL
+	if top_type == 'music':
+		url = SpotifyAppConfig.SPOTIFY_API_USER_TOP_MUSIC_URL
+	elif top_type == 'artists':
+		url = SpotifyAppConfig.SPOTIFY_API_USER_TOP_ARTISTS_URL
+	else: raise ValueError('utils.get_user_top: invalid "tpo_type" argument')
 
 	top_music = requests.get(url, headers=headers).json()
 
