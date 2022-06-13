@@ -1,12 +1,19 @@
 .track-search-result {
     display: flex;
-    margin: 1rem;
     align-items: center;
     height: 70px;
     cursor: pointer;
-    width: 96vh;
-}
+    width: 100%;
+    background-color: #fff;
 
+
+}
+.track-search-result:first-child{
+    border-radius: 20px 20px 0px 0px;
+}
+.track-search-result:last-child{
+    border-radius: 0px 0px 20px 20px;
+}
 .track-search-result-info {
-    margin-left: 3rem;
+    padding-left: 3rem;
 }

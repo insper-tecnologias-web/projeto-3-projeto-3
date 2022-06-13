@@ -14,7 +14,9 @@ export default function Player({ accessToken, trackUri }) {
       callback={state => !state.isPlaying && setPlay(false)}
       play={play}
       uris={trackUri ? trackUri : []}
+      magnifySliderOnHover
       styles={{
+
         activeColor: "#fff",
         bgColor: "#333",
         color: "#fff",
@@ -22,7 +24,8 @@ export default function Player({ accessToken, trackUri }) {
         sliderColor: "#1cb954",
         trackArtistColor: "#ccc",
         trackNameColor: "#fff",
-        height: "55px",
+        height: "4rem",
+
       }}
     />
   )
