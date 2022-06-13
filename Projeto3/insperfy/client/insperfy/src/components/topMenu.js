@@ -31,7 +31,7 @@ export default function TopMenu() {
         <Link to="/" style={{ textDecoration: 'none' }}>
         <Button variant="text" sx={{ color: '#ffffff',fontSize:"1.5rem" }}>Player</Button>
         </Link>
-        <Link to="howtoplay" style={{ textDecoration: 'none' }}>
+        <Link to="topSongs" style={{ textDecoration: 'none' }}>
         <Button variant="text" sx={{ color: '#ffffff',fontSize:"1.5rem"}}>Top Músicas</Button>
         </Link>
  

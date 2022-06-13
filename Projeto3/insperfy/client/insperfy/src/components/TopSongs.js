@@ -7,3 +7,10 @@ import TopMenu from "./topMenu";
 import Player from "./Player";
 
 
+export default function TopSongs() {
+    return (
+        <div className="topSongs">
+            <p className="topSongsTitle">Top Songs</p>
+        </div>
+    )
+}

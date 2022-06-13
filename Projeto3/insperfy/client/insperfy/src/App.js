@@ -1,6 +1,7 @@
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Box from '@mui/material/Box';
+import TopSongs from './components/TopSongs';
 import {useState, useEffect} from 'react'
 import {
   Routes,
@@ -30,7 +31,7 @@ function App() {
       {token ? 
       <Routes>
         <Route path="/" element={<Dashboard token={token}/>} />
-        <Route path="topSongs" element={<div>How to play</div>} />
+        <Route path="topSongs" element={<TopSongs/>} />
       </Routes>
       : <Login />}
     
