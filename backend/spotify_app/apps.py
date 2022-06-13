@@ -31,7 +31,7 @@ class SpotifyAppConfig(AppConfig):
     SCOPE += ' user-read-private'
     SCOPE += ' playlist-modify-private'
 
-    FRONTEND_ADDRESS = 'http://localhost:8000/api/callback/'
+    FRONTEND_ADDRESS = 'http://localhost:3000/callback/'
 
     # -- ---  URLs de autenticação   --- --- --- --- --- --- --- --- ---
     SPOTIFY_API_AUTH_URL = 'https://accounts.spotify.com/'
