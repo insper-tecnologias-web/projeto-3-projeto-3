@@ -13,22 +13,19 @@ Jerônimo Afrange, Lucas Fonseca e Ricardo Israel - Grupo 9
 - [x] Criar um projeto em react e prepará-lo para desenvolvimento
 
 ## 26/05
-- [ ] Projetar a endpoint que retorna uma playlist 
-- [ ] Projetar a endpoint que deleta e adiciona uma musica da playlist
-- [ ] Projetar a endpoint que mostra as musicas mais tocadas
-- [ ] Projetar a endpoint que favorita e desfavorita uma musica
-- [ ] Projetar a endpoint que mostra musica aleatoria
-- [ ] Começar o desenvolvimento do frontend 
-- [ ] Primeira versão do frontend - Integração com o backend
-- [ ] Criar a página com todas as playlist
+- [x] Projetar a endpoint que retorna uma playlist 
+- [x] Projetar a endpoint que deleta e adiciona uma musica da playlist
+- [x] Projetar a endpoint que mostra as musicas mais tocadas
+- [x] Projetar a endpoint que favorita e desfavorita uma musica
+- [] Projetar a endpoint que mostra musica aleatoria (descontinudo)
+- [x] Começar o desenvolvimento do frontend 
+- [x] Primeira versão do frontend
+- [ ] Criar a página com todas as playlist (descontinudo)
 
 ## 31/05
-- [ ] Projetar a comunicação do frontend com a API - Criar a página que retira informações dos filmes que renderiza ao usuário (title/get-overview-details
-)
-- [ ] Possibilitar que o usuário salve um filme e mostrar todas as opções de estado
-- [ ] Configurar um jeito do usuário de navegar entre as muitas abas
-- [ ] Criar a barra de pesquisa com autocomplete
-- [ ] Projetar todos os estilos das páginas - nada muito robusto, apenas que o visual fique limpo e bom aos olhos.
+- [x] Configurar um jeito do usuário de navegar diferentes página
+- [x] Criar a barra de pesquisa com autocomplete
+- [x] Criar player de música integrado a barra de busca
 
 ## 02/06
 - [ ] Terminar os estilos das páginas
