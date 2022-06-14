@@ -1,15 +1,44 @@
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Box from '@mui/material/Box';
-
-
+import TopSongs from './components/TopSongs';
+import {useState, useEffect} from 'react'
+import {
+  Routes,
+  Route
+} from "react-router-dom";
 function App() {
-  const code = new URLSearchParams(window.location.search).get('code');
 
+  const [token, setToken] = useState("")
+
+    useEffect(() => {
+        const hash = window.location.hash
+        let token = window.localStorage.getItem("token")
+
+        if (!token && hash) {
+            token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
+
+            window.location.hash = ""
+            window.localStorage.setItem("token", token)
+        }
+
+        setToken(token)
+
+    }, [])
   return (
+    <div className="App">
     <Box sx={{ height : "100vh"}}>
-      {code ? <Dashboard code={code} /> : <Login />}
+      {token ? 
+      <Routes>
+        <Route path="/" element={<Dashboard token={token}/>} />
+        <Route path="topSongs" element={<TopSongs/>} />
+      </Routes>
+      : <Login />}
+    
+
     </Box>
+    </div>
+
   );
 }
 

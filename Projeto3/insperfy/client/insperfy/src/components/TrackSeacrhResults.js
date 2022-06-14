@@ -9,7 +9,7 @@ export default function TrackSearchResult({track, chooseTrack}) {
     return (
         <div
             className="track-search-result"
-            style={{cursor: "pointer"}}
+            style={{cursor: "pointer", paddingLeft: "0.5rem",paddingBottom: "0.5rem",paddingTop: "0.5rem"}}
             onClick={handlePlay}
         >
             <img src={track.albumUrl} style={{height: "64px", width: "64px", borderRadius: "8px"}}/>
